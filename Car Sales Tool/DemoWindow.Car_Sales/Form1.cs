@@ -20,11 +20,19 @@ namespace DemoWindow.Car_Sales
             button1.Text = "Add";
             button2.Text = "Show";
             label1.Text = "Brand";
+            label2.Text = "Register Number";
+            label3.Text = "Car Model";
+            label4.Text = "Year Model";
+            label5.Text = "Color";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Car NewCar = new Car() { Brand = textBox1.Text };
+            Car NewCar = new Car() {
+                Brand = textBox1.Text, RegisterNumber = textBox2.Text,
+                Model = textBox3.Text, Yearmodel = textBox4.Text,
+                Color = textBox5.Text
+            };
             Respo.Save(NewCar);
             textBox1.Clear();
         }
@@ -35,10 +43,11 @@ namespace DemoWindow.Car_Sales
             listBox1.Items.Clear();
             foreach (Car x in TempList)
             {
-                listBox1.Items.Add(x.Brand);
-                
+                listBox1.Items.Add(x);
+
             }
-            
+
         }
+
     }
 }

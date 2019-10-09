@@ -17,6 +17,8 @@ namespace Car_Sales.DAL
         public void Save(Car NewCar)
         {
 
+            
+            
             MyCars.Add(NewCar);
             // - Sparar den nya bilen till databasen
         }
@@ -29,5 +31,6 @@ namespace Car_Sales.DAL
         {
            // -Uppdaterar en specifik data i databasen med hjälp av Id och en specifik kolumn
         }
+
     }
 }

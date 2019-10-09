@@ -4,4 +4,7 @@ Fore Develop Commit 1.0: Adding and displaying item using List as an testing Rep
 	Will create an simple ui at DemoWindow  with one textBox for User input data, Two Buttons and ListBox for displaying the stored data.
 	Button 1 will save the input data to the repostory and Button 2 will show the stored data in repostory in Listbox.
 	For this test i use an List as repostory.
+Fore Develop Commit 2.0: Adding addtional textbox and making ToSting method in Repostory for Cars
+	Will add more textBoxes to asign input value. will modify these input value into one string that will be showed when just Car is called.
+	the method for this in Repostory.
 
