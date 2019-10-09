@@ -78,13 +78,13 @@ Repostroy
 
 Program Structure for Car Sales Tool
 UI - Window.Car_Sales
-	- Form1:Huvudmeny med två knappar som vägledder till verktyget två huvudfunktioner "Car Stock new car" och "Car Stock".
+	- MainForm:Huvudmeny med två knappar som vägledder till verktyget två huvudfunktioner "Car Stock new car" och "Car Stock".
 		Både kommer skapa en ny specifik form som behandlar sin utsedda funktion.
 	-RegisterCarForm: UI som låter användaren lägga till en bil.
 	-CarStockForm: UI som visar alla de registerad bilar. Användaren ska kunna välja en bil och öppna en ny form som visar detaljerad infomation.
 	-CarDetailForm: Visar all data för en specifik bil. Här kommer även finnas en knapp som ta bort bilen och stänger ner formen.
 			Man ska ändra data genom att klicka på den specifika datan du vill ändra. Detta ledda till en liten infyllning form som låter dig ändra denna data.
-	-CarDetailEditForm: Ändra en specifik data.
+	-CarDetailEdit	Form: Ändra en specifik data.
 	Har till en börja en demo UI som testar alla grund funktioner.
 Business Logic - Car.Business
 			Car.cs (Klassen med alla Car proppties)

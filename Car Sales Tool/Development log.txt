@@ -1,0 +1,7 @@
+Development log about thought and plans the development goal for the next commitment,
+
+Fore Develop Commit 1.0: Adding and displaying item using List as an testing Repostory.
+	Will create an simple ui at DemoWindow  with one textBox for User input data, Two Buttons and ListBox for displaying the stored data.
+	Button 1 will save the input data to the repostory and Button 2 will show the stored data in repostory in Listbox.
+	For this test i use an List as repostory.
+
