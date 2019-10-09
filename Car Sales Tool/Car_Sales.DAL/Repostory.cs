@@ -16,10 +16,13 @@ namespace Car_Sales.DAL
 
         public void Save(Car NewCar)
         {
+
+            MyCars.Add(NewCar);
             // - Sparar den nya bilen till databasen
         }
-        public void GetList()
+        public List<Car> GetList()
         {
+            return MyCars;
             // -Hämtar allt som är lagrat och lagrar det i en list som returneras. 
         }
         public void Update(int id, string ChangeData)

@@ -64,11 +64,11 @@
     <Compile Include="CarStockForm.Designer.cs">
       <DependentUpon>CarStockForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +78,9 @@
     <Compile Include="RegisterCarform.Designer.cs">
       <DependentUpon>RegisterCarform.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CarDetailForm.resx">
+      <DependentUpon>CarDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
