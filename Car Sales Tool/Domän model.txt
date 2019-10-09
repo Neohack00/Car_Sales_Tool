@@ -1,0 +1,108 @@
+Uppgiften:
+Del 1
+Fundera fritt på hur du beskriver domänmodellen och skriv ned den. 
+Du letar efter substantiv, verb och attribut. 
+Vägledning är SOC och SRP. Fundera igenom din namngivning av projekt, solution, namespace mm
+
+1) Skapa en ny Blank Solution
+2) Lägg till en ny textfil med texten för din domänmodell 
+3) Fundera på vilka projekttyper du kommer behöva för att börja
+4) Skapa (lägg till) nya projekt till din solution
+5) OBS: glöm inte att sätta upp Git... (tänk på .gitignore)
+
+Del 2
+Happy-path!
+Bygg en snabb enkel minimalt fungerande lösning som uppfyller de..
+..viktigaste delarna av kundens önskemål utifrån din domänmodell. 
+1)Provkör. 
+2)Justera. (Agile feedback-loop: gör, upplev, få insikter, justera, gör igen)
+3)Uppdatera din domänmodell och skriv ned vad du tycker behöver refactoreras och utvecklas mer.
+
+Del 3
+
+1)Fokus på repository och att få in en databas i din lösning
+2)Ditt repository/DB måste kunna hantera CRUD
+
+------------------------------------------------------------------------------------------------------------------------
+Arkitekt Program Structure Model
+
+	UI
+Presentions Logic
+Business Logic - Application Programing Interface
+Data Access Layer
+Repostroy
+
+
+Beställaren:
+Hen vill ha ett verktygsstöd (program) för att hantera inköp av nya bilar, försäljning och marknadsföring av bilar.
+
+Domänmodell
+Ideen om moddellen
+För att användaren skulle kunna hantera sina inköpta bilar så måste verktyget ha en funktion som displayar alla bilar i verktygets UI. 
+Detta kan göras i form av listbox som listar ut alla inköpta bilar samt listar ut nödvändigast detaljerna om alla bilar i denna lista. 
+Användaren skulle kunna välja en av bilarna ur lista för att få mer detaljer om listan.
+Användaren ska kunna ändra infomation i en specifik bil samt ta bort den från listan.
+Självklart ska det finnas en funktion som låter användaren kunna lägga till nya bilar till sin lista av inköpta bilar.
+Listan av användarens bilar kommer förvaras i verktyget DAL. DAL typen jag valt är en lokal sql data bass.
+En Bil i listan kommer vara en klass objekt som innehåller all nödvändig infomation användaren behöver veta.
+
+Objekt Bil skall innehålla:
+Brand = bil märket på bilen*
+Speed = Max hastigheten 
+HorsePower = hästkrafter
+Color = färg på bilen *
+RegisterNumber = Registering Nummer på bilen*
+Price = Den satta priset *
+Model =  bil model *
+YearsModel = års Model *
+SecondHand = Sant eller falskt dvs nytillverkad.
+TotalKmDrived = Det totala sträcka bilen har åkt i sin livstid.
+
+Prioterade data som kommer visas i listboxen först är märkerad med *. Detta kan ändras.
+
+  
+Dessa är huvud funktionen verktyget behöver:
+
+Lägga till en bil och bilen till listan i DAL 
+Hämta bilarna från DAL och visa upp dem i UI
+Kunna välja en specifik bil från listan för mer info
+Kunna ändra/ta bort den utvalda bilen. 
+
+Arkitekt Program Structure Model
+
+	UI
+Presentions Logic
+Business Logic - Application Programing Interface
+Data Access Layer
+Repostroy
+
+Program Structure for Car Sales Tool
+UI - Window.Car_Sales
+	- Form1:Huvudmeny med två knappar som vägledder till verktyget två huvudfunktioner "Car Stock new car" och "Car Stock".
+		Både kommer skapa en ny specifik form som behandlar sin utsedda funktion.
+	-RegisterCarForm: UI som låter användaren lägga till en bil.
+	-CarStockForm: UI som visar alla de registerad bilar. Användaren ska kunna välja en bil och öppna en ny form som visar detaljerad infomation.
+	-CarDetailForm: Visar all data för en specifik bil. Här kommer även finnas en knapp som ta bort bilen och stänger ner formen.
+			Man ska ändra data genom att klicka på den specifika datan du vill ändra. Detta ledda till en liten infyllning form som låter dig ändra denna data.
+	-CarDetailForm.Edit: Ändra en specifik data.
+Business Logic - Car.Business
+			Car.cs (Klassen med alla Car proppties)
+
+DAL - Car.DAL
+	Repostory.cs
+		Methoder:
+		Save(Car NewCar)
+			- Sparar den nya bilen till databasen
+		GetList()
+			-Hämtar allt som är lagrat och lagrar det i en list som returneras.
+		Update(Id , Changes data)
+			-Uppdaterar en specifik data i databasen med hjälp av Id och en specifik kolumn
+Repostory - Car.DB (localsqldb)
+	
+
+
+
+
+
+
+
